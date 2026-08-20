@@ -1,0 +1,5 @@
+aws_region="ap-south-1"
+project_name="aws-container-cicd"
+github_org="YOUR_GITHUB_USERNAME"
+github_repo="aws-container-cicd"
+vpc_cidr="10.30.0.0/16"

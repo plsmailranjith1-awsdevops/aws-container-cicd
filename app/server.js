@@ -1,0 +1,3 @@
+const express=require("express");const app=express();const port=process.env.PORT||3000;const version=process.env.APP_VERSION||"1.0.0";
+app.get("/",(_req,res)=>res.send("<h1>AWS Container CI/CD</h1><p>ECS/Fargate deployment successful.</p><p>Version: "+version+"</p><a href='/health'>health</a>"));
+app.get("/health",(_req,res)=>res.json({status:"healthy",version}));app.listen(port,"0.0.0.0",()=>console.log("listening on "+port));

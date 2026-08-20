@@ -1,0 +1,10 @@
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+.env
+*.pem
+*.key
+node_modules/
+.vscode/
+.idea/

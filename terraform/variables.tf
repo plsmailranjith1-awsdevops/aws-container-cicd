@@ -1,0 +1,1 @@
+variable "aws_region"{default="ap-south-1"} variable "project_name"{default="aws-container-cicd"} variable "github_org"{type=string} variable "github_repo"{type=string} variable "vpc_cidr"{default="10.30.0.0/16"}
