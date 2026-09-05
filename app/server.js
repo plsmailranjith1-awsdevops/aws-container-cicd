@@ -1,3 +1,29 @@
-const express=require("express");const app=express();const port=process.env.PORT||3000;const version=process.env.APP_VERSION||"1.0.0";
-app.get("/",(_req,res)=>res.send("<h1>AWS Container CI/CD</h1><p>ECS/Fargate deployment successful.</p><p>Version: "+version+"</p><a href='/health'>health</a>"));
-app.get("/health",(_req,res)=>res.json({status:"healthy",version}));app.listen(port,"0.0.0.0",()=>console.log("listening on "+port));
+const express = require("express");
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.get("/", (req, res) => {
+  res.send(`
+    <html>
+      <head>
+        <title>AWS Container CI/CD</title>
+      </head>
+      <body>
+        <h1>AWS Container CI/CD</h1>
+        <p>Application is running successfully.</p>
+        <p>Deployed using Docker, Amazon ECR, Amazon ECS Fargate and GitHub Actions.</p>
+      </body>
+    </html>
+  `);
+});
+
+app.get("/health", (req, res) => {
+  res.status(200).json({
+    status: "healthy"
+  });
+});
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Application running on port ${PORT}`);
+});

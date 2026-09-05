@@ -1,10 +1,7 @@
 .terraform/
 *.tfstate
 *.tfstate.*
-terraform.tfvars
-.env
-*.pem
-*.key
-node_modules/
-.vscode/
-.idea/
+.terraform.lock.hcl
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
