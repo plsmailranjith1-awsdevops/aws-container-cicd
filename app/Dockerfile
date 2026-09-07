@@ -10,4 +10,8 @@ COPY server.js ./
 
 EXPOSE 3000
 
+<<<<<<< HEAD
 CMD ["npm", "start"]
+=======
+CMD ["npm", "start"]
+>>>>>>> 5f0053a (Initial commit - AWS Container CI/CD project)

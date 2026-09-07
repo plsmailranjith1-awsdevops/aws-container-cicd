@@ -9,4 +9,8 @@
   "dependencies": {
     "express": "^4.21.2"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 5f0053a (Initial commit - AWS Container CI/CD project)
